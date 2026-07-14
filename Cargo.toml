@@ -1,0 +1,22 @@
+[package]
+name = "global-allocator"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "A tiny, dependency-free building block for defining a custom global allocator in any Rust crate."
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/siddharthmittal13/global-allocator"
+keywords = ["allocator", "global-allocator", "memory", "no_std", "alloc"]
+categories = ["memory-management", "no-std"]
+
+[features]
+default = ["std"]
+# Enables the `System`-backed constructors (`CustomAllocator::system()` and the
+# `CustomAllocator<System>` default). Disable for `no_std` usage.
+std = []
+
+[dependencies]
+
+[badges]
+maintenance = { status = "actively-developed" }
